@@ -108,6 +108,6 @@ class EmbeddingKey(Enum):
 
 def get_embeddings(embedding_key):
     embedding_path = {
-        EmbeddingKey.GLOVE: GLOVE_PATH,
+        EmbeddingKey.GLOVE: "/kaggle/input/glove840b300dtxt/glove.840B.300d.txt",
     }[embedding_key]
-    return KeyedVectors.load_word2vec_format(embedding_path, binary=True)
+    return KeyedVectors.load_word2vec_format(embedding_path, binary=False)
